@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.github.xiaoymin.knife4j.annotations.ApiSupport;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
  **/
 @RestController
 @RequestMapping("/first")
+@ApiSupport(author = "yyyy",order = 2)
 public class NumberOneController {
 
     @GetMapping("/getOne")

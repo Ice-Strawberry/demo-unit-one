@@ -7,8 +7,8 @@ import java.time.LocalDateTime;
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
 import java.io.Serializable;
-//import io.swagger.annotations.ApiModel;
-//import io.swagger.annotations.ApiModelProperty;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -23,7 +23,7 @@ import lombok.EqualsAndHashCode;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @TableName("user")
-//@ApiModel(value="User对象", description="")
+@ApiModel(value="User对象", description="")
 public class User implements Serializable {
 
     private static final long serialVersionUID=1L;
@@ -46,7 +46,7 @@ public class User implements Serializable {
     @TableField(value = "update_time", fill = FieldFill.INSERT_UPDATE)
     private LocalDateTime updateTime;
 
-//    @ApiModelProperty(value = "是否删除1删0未删")
+    @ApiModelProperty(value = "是否删除1删0未删")
     @TableField(value = "is_delete", fill = FieldFill.INSERT)
     private Boolean isDelete;
 
